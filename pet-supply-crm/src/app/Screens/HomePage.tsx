@@ -1,4 +1,4 @@
-import { NavBar,Banner,ProductCard, TestimonialCard} from "../Components";
+import { NavBar,Banner,ProductCard, TestimonialCard,Footer} from "../Components";
 
 const products = [
   { name: 'Pet Food', price: 12.99, description: 'Alimento nutritivo…', image: 'https://placekitten.com/300/300' },
@@ -40,17 +40,16 @@ const testimonials = [
 export const HomePage = () => {
   return (
     <>
-      {/* Navbar + Banner a ancho completo */}
+  
       <div className="w-full flex flex-col">
         <NavBar />
         <Banner />
       </div>
 
-      {/* ——————————————————————————————————————
-           Carrusel horizontal de Productos Destacados
-         —————————————————————————————————————— */}
+
       <section className="w-full bg-white py-8">
-        <h2 className="max-w-7xl mx-auto px-4 text-2xl font-bold mb-4">
+      
+        <h2 className="max-w-7xl mx-auto px-4 text-2xl font-bold mb-4 text-center text-black text-3xl">
           Productos Destacados
         </h2>
         <div className="w-full overflow-x-auto">
@@ -69,15 +68,15 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* ——————————————————————————————————————
-           Carrusel horizontal de Testimonios
-         —————————————————————————————————————— */}
-      <section className="w-full bg-gray-50 py-8">
-        <h2 className="max-w-7xl mx-auto px-4 text-2xl font-bold mb-4">
+      {/* — Testimonios de Clientes — */}
+      <section className="w-full py-8 m-8">
+        {/* Título centrado */}
+        <h2 className="max-w-7xl mx-auto px-4 text-2xl font-bold mb-4 text-center text-black text-3xl">
           Lo que dicen nuestros clientes
         </h2>
         <div className="w-full overflow-x-auto">
-          <div className="flex space-x-8 px-4">
+          {/* Carrusel centrado */}
+          <div className="flex justify-center space-x-8 px-4">
             {testimonials.map((t, idx) => (
               <div key={idx} className="flex-none">
                 <TestimonialCard
@@ -91,6 +90,7 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   )
 }
