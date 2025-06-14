@@ -1,4 +1,3 @@
-// src/components/Banner.tsx
 import React from 'react'
 
 export const Banner = () => {

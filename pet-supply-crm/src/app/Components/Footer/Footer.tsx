@@ -1,4 +1,3 @@
-// src/components/Footer.tsx
 import React from 'react'
 import Link from 'next/link'
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
@@ -7,7 +6,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-800 text-gray-300 py-10">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Sección de enlaces */}
+  
         <div>
           <h4 className="text-white font-semibold mb-4">Enlaces</h4>
           <ul className="space-y-2">
@@ -18,7 +17,7 @@ export const Footer: React.FC = () => {
           </ul>
         </div>
 
-        {/* Sección de contacto */}
+       
         <div>
           <h4 className="text-white font-semibold mb-4">Contáctanos</h4>
           <p className="mb-2">📍 Ciudad Mascota</p>
@@ -26,7 +25,6 @@ export const Footer: React.FC = () => {
           <p>✉️ info@petsupplystore.com</p>
         </div>
 
-        {/* Sección social y suscripción */}
         <div>
           <h4 className="text-white font-semibold mb-4">Síguenos</h4>
           <div className="flex space-x-4 mb-6">
@@ -51,7 +49,6 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      {/* Derechos de autor */}
       <div className="mt-10 border-t border-gray-700 pt-4 text-center text-sm">
         &copy; {new Date().getFullYear()} Pet Supply Store. Todos los derechos reservados.
       </div>

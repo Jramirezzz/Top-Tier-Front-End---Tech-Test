@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 'use client'
 import React, { useState } from 'react'
 import Link from 'next/link'
@@ -14,21 +13,18 @@ export const Navbar = () => {
   return (
     <nav className="bg-blue-500 p-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        {/* Logo */}
         <div className="text-white font-bold text-2xl">
           <Link href="/">
             Pet Supply
           </Link>
         </div>
 
-        {/* Menú en pantallas grandes */}
         <div className="hidden md:flex space-x-4">
          <Link href="/" className="text-white hover:text-gray-300">Inicio</Link>
           <Link href="/products" className='text-white hover:text-gray-300'>Productos</Link>
           <Link href="/contact" className="text-white hover:text-gray-300">Contacto</Link>
         </div>
 
-        {/* Icono de menú para pantallas pequeñas */}
         <button
           className="md:hidden text-white"
           onClick={toggleMenu}
@@ -39,7 +35,6 @@ export const Navbar = () => {
         </button>
       </div>
 
-      {/* Menú desplegable en pantallas pequeñas */}
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="space-y-4 p-4">
           <Link href="/" className="block text-white hover:text-gray-300">

@@ -1,4 +1,3 @@
-// pages/products/index.tsx
 'use client'
 
 import React, { useState } from 'react'
@@ -25,13 +24,11 @@ export default function ProductsPage() {
   const [onlyInStock, setOnlyInStock] = useState<boolean>(false)
   const limit = 6
 
-  // 1. Filtrar
   let filtered = all
   if (category !== 'all') filtered = filtered.filter(p => p.category === category)
   filtered = filtered.filter(p => p.price >= minPrice && p.price <= maxPrice)
   if (onlyInStock) filtered = filtered.filter(p => p.inStock)
 
-  // 2. Paginar
   const totalPages = Math.ceil(filtered.length / limit)
   const start = (page - 1) * limit
   const end = start + limit
@@ -41,7 +38,6 @@ export default function ProductsPage() {
     <main className="max-w-7xl mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6 text-center">Catálogo de Productos</h1>
 
-      {/* Filtros */}
       <div className="flex flex-wrap gap-4 mb-6 justify-center">
         <select
           value={category}
@@ -80,7 +76,6 @@ export default function ProductsPage() {
         </label>
       </div>
 
-      {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {items.map(p => (
           <Link key={p.id} href={`/products/${p.id}`}>
@@ -94,7 +89,6 @@ export default function ProductsPage() {
         ))}
       </div>
 
-      {/* Paginación */}
       <div className="flex justify-between items-center mt-8">
         <button
           onClick={() => setPage(prev => Math.max(prev - 1, 1))}

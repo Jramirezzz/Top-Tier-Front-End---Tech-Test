@@ -1,4 +1,3 @@
-// src/components/TestimonialCard.tsx
 import React from 'react'
 
 interface TestimonialProps {
@@ -17,9 +16,7 @@ export const TestimonialCard: React.FC<TestimonialProps> = ({
   return (
     <div className="max-w-sm bg-white rounded-xl shadow-lg overflow-hidden">
       <div className="p-6">
-        {/* Texto del testimonio */}
         <p className="text-gray-700 italic mb-4">“{testimonial}”</p>
-        {/* Perfil del usuario */}
         <div className="flex items-center">
           <img
             src={avatar}
